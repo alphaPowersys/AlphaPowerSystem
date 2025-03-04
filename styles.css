@@ -1,0 +1,463 @@
+/* General Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f9f9f9;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+    padding: 1rem 0;
+}
+
+a {
+    color: #007bff; /* Modern Blue */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #0056b3;
+}
+
+/* Header Styles */
+header {
+    background: #fff; /* White Background */
+    color: #333;
+    padding: 1rem 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle Shadow */
+    position: relative;
+    z-index: 10; /* Ensure it's above other elements */
+}
+
+.header-top {
+    position: absolute;
+    top: 0.5rem;
+    left: 1rem;
+    font-size: 0.9rem;
+    color: #777;
+}
+
+.branding {
+    float: left;
+    margin-left: 0; /* Removed hardcoded margin */
+    text-align: left; /* Align to the left */
+}
+
+.branding h1 {
+    margin: 0;
+    font-size: 2rem;
+    color: #222;
+}
+
+nav {
+    float: right;
+    margin-top: 0.5rem;
+}
+
+header ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+header li {
+    display: inline;
+    margin-left: 1.5rem;
+}
+
+header a {
+    color: #333;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+}
+
+header a:hover {
+    color: #007bff;
+}
+
+.logo {
+    max-height: 100px; /* Adjust as needed */
+    vertical-align: 10px; /* Align logo with text */
+    margin-right: 50px;
+}
+
+/* Hero Section Styles */
+#hero {
+    background: #e9ecef; /* Light Gray Background */
+    padding: 4rem 0;
+    text-align: center;
+}
+
+#hero h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #222;
+}
+
+#hero p {
+    font-size: 1.2rem;
+    color: #555;
+}
+
+/* Button Styles (CTA) */
+.cta-button {
+    display: inline-block;
+    background: #007bff;
+    color: #fff;
+    padding: 0.75rem 1.5rem;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+    border: none; /* Remove default button border */
+    cursor: pointer;
+}
+
+.cta-button:hover {
+    background-color: #0056b3;
+}
+
+/* Featured Products Section Styles */
+#featured-products {
+    padding: 3rem 0;
+}
+
+#featured-products h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: #222;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.product {
+    background: #fff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    text-align: center;
+}
+
+.product img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 1rem;
+}
+
+.product h3 {
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+    color: #222;
+}
+
+.product p {
+    font-size: 1rem;
+    color: #555;
+}
+
+.product-link {
+    display: inline-block;
+    margin-top: 1rem;
+    color: #007bff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.product-link:hover {
+    color: #0056b3;
+}
+
+/* About Snippet & Services Snippet Styles */
+#about-snippet,
+#services-snippet {
+    padding: 3rem 0;
+    background: #fff;
+    border-bottom: 1px solid #eee;
+}
+
+#about-snippet .container,
+#services-snippet .container {
+    text-align: center;
+}
+
+#about-snippet h2,
+#services-snippet h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: #222;
+}
+
+#services-snippet ul {
+    list-style: none;
+    padding: 0;
+}
+
+#services-snippet li {
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+    color: #555;
+}
+
+/* Contact Form Snippet Styles */
+#contact-form-snippet {
+    padding: 3rem 0;
+    background: #f4f4f4;
+}
+
+#contact-form-snippet .container {
+    max-width: 700px;
+    margin: auto;
+}
+
+#contact-form-snippet h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: #222;
+}
+
+#contact-form-snippet label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: #333;
+}
+
+#contact-form-snippet input[type="text"],
+#contact-form-snippet input[type="email"],
+#contact-form-snippet textarea {
+    width: 100%;
+    padding: 0.75rem;
+    margin-bottom: 1.5rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+#contact-form-snippet textarea {
+    resize: vertical; /* Allow vertical resizing */
+}
+
+/* Form Submit Button */
+#contact-form-snippet button[type="submit"] {
+    display: block;
+    width: 100%;
+    background: #28a745; /* Success Green */
+    color: #fff;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#contact-form-snippet button[type="submit"]:hover {
+    background-color: #218838;
+}
+/* Footer Styles */
+footer {
+    background: #343a40; /* Dark Gray */
+    color: #fff;
+    text-align: center;
+    padding: 1.5rem 0;
+    margin-top: 3rem;
+    font-size: 0.9rem;
+}
+
+footer a {
+    color: #fff; /* White links in footer */
+}
+
+/* Page-Specific Styles (Adjust as Needed) */
+#about-page,
+#products-page,
+#services-page,
+#contact-page {
+    padding: 3rem 0;
+}
+
+#about-page h2,
+#products-page h2,
+#services-page h2,
+#contact-page h2 {
+    font-size: 2.2rem;
+    margin-bottom: 1.5rem;
+    color: #222;
+    text-align: center;
+}
+
+#about-page h3,
+#products-page h3,
+#services-page h3 {
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+    color: #222;
+}
+
+#about-page ul {
+    list-style: disc;
+    margin-left: 2rem;
+    margin-bottom: 100px;
+}
+
+#about-page li {
+    font-size: 1.1rem;
+    color: #555;
+}
+
+/* Products Page */
+#products-page .product-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+#products-page .product-item {
+    width: 300px;
+    margin-bottom: 20px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    text-align: center;
+}
+
+#products-page .product-item img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+/* Contact Page */
+.contact-info {
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.contact-info h3 {
+    font-size: 1.4rem;
+    margin-bottom: 0.5rem;
+    color: #222;
+}
+
+.contact-info p {
+    font-size: 1.1rem;
+    color: #555;
+}
+
+/* Responsive Design */
+@media(max-width: 768px) {
+    .container {
+        width: 95%;
+    }
+
+    header, nav {
+        float: none;
+        text-align: center;
+    }
+
+    header li {
+        display: block;
+        margin: 0.5rem 0;
+    }
+
+    .branding {
+        float: none;
+        text-align: center;
+    }
+
+    nav {
+        margin-top: 0.5rem;
+    }
+
+    /* Adjust hero section padding */
+    #hero {
+        padding: 2rem 0;
+    }
+
+    #hero h2 {
+        font-size: 2rem;
+    }
+
+    #hero p {
+        font-size: 1.1rem;
+    }
+    .product-grid {
+        grid-template-columns: 1fr; /* Stack products on smaller screens */
+    }
+
+    #contact-form-snippet .container {
+        max-width: 95%; /* Expand the form on smaller screens */
+    }
+
+    .header-top {
+        position: static;
+        text-align: center;
+        margin-bottom: 0.5rem;
+    }
+
+    .header-top .phone-number {
+        display: block;
+    }
+
+    header nav {
+        float: none;
+        width: 100%;
+        text-align: center;
+        
+    }
+
+    header ul {
+        padding: 0;
+        margin: 0;
+        position:relative;
+        top: 28px;
+        
+    }
+
+    header li {
+        display: block;
+        margin: 0.5rem 0;
+    }
+
+    /* Correctly center branding on smaller screens */
+    .branding {
+        float: none;
+        text-align: center;
+        margin-left: 0; /* Remove any lingering left margin */
+    }
+
+    /* Adjust product grid */
+    .product-grid {
+        grid-template-columns: 1fr; /* One column on small screens */
+        gap: 1rem;
+    }
+    /* Adjust featured products section */
+    #featured-products {
+        padding: 2rem 0;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1200px) {
+    .container {
+        width: 90%;
+    }
+    header li {
+        margin-left: 1rem;
+    }
+}
