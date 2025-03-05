@@ -36,11 +36,12 @@ header {
 }
 
 .header-top {
-    position: absolute;
-    top: 0.5rem;
-    left: 1rem;
+    position: relative;
+    top: 50px;
+    left: -220px;
     font-size: 0.9rem;
     color: #777;
+    right:217px
 }
 
 .branding {
@@ -413,6 +414,8 @@ footer a {
 
     .header-top .phone-number {
         display: block;
+        position: relative;
+        right:217px;
     }
 
     header nav {
