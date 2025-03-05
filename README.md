@@ -1,3 +1,2 @@
 # AlphaPowerSystem
 
-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
