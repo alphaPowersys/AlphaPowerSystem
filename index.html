@@ -17,40 +17,7 @@
     <meta name="author" content="Alpha Power System">
     <style>
       /* Slider Styles */
-        .product-slider {
-            width: 100%;
-            overflow: hidden;
-            position: relative;
-            margin-top: 20px; /* Add some spacing above the slider */
-        }
-
-        .product-slide-track {
-            display: flex;
-            animation: slide 10s linear infinite; /* Adjust duration as needed */
-        }
-
-        .product-slide {
-            width: 200px; /* Adjust as needed */
-            margin: 10px;
-            flex-shrink: 0; /* Prevent slides from shrinking */
-        }
-
-        .product-slide img {
-            width: 100%;
-            height: auto;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-        }
-
-        @keyframes slide {
-            0% {
-                transform: translateX(0);
-            }
-            100% {
-                /* Calculate this value:  -(number of original slides) * (width of one slide + margin) */
-                transform: translateX(-440px);  /*Example for this code with 2 orig slides */
-            }
-        }
+        
     </style>
 </head>
 <body>
@@ -59,12 +26,16 @@
         <div class="container">
             <div class="branding">
                 <a href="index.html">
-                    <img src="luminous-logo.png" alt="Alpha Power System Logo - Inverters & Batteries" class="logo">
+                    <!-- <img src="luminous-logo.png" alt="Alpha Power System Logo - Inverters & Batteries" class="logo"> -->
+                    <img src="alpha-logo.jpg" alt="Alpha Power System Logo - Inverters & Batteries" class="logo">
                 </a>
             </div>
             <div class="header-top">
                 <p class="phone-number">
-                    <a href="tel:+919036715532">+91-9036715532</a>
+                    <a href="tel:+919036715532" class="phone-link">
+                        <img src="phone_icon.png" alt="Call +91-9036715532" class="phone-icon">
+                        +91-9036715532
+                    </a>
                 </p>
             </div>
             <nav>
