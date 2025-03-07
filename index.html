@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Luminous Home UPS & Batteries | Alpha Power System, Bangalore</title>
     <link rel="stylesheet" href="styles.css">
+    <!-- <script src="slider.js"></script> -->
     <link rel="canonical" href="https://www.alphapowersystem.in/">
 
     <meta name="title" content="Alpha Power System - UPS Inverters & Batteries in Bangalore">
@@ -15,10 +16,7 @@
     <meta name="revisit-after" content="1 day">
     <meta name="language" content="English">
     <meta name="author" content="Alpha Power System">
-    <style>
-      /* Slider Styles */
-        
-    </style>
+  
 </head>
 <body>
 
@@ -30,14 +28,14 @@
                     <img src="alpha-logo.jpg" alt="Alpha Power System Logo - Inverters & Batteries" class="logo">
                 </a>
             </div>
-            <div class="header-top">
+            <!-- <div class="header-top">
                 <p class="phone-number">
                     <a href="tel:+919036715532" class="phone-link">
-                        <img src="Phone_icon.png" alt="Call +91-9036715532" class="phone-icon">
-                        +91-9036715532
+                         <img src="Phone_icon.png" alt="Call +91-9036715532" class="phone-icon">
+                        +91-9036715532 
                     </a>
                 </p>
-            </div>
+            </div> -->
             <nav>
                 <ul>
                     <li><a href="index.html">Home</a></li>
@@ -50,34 +48,80 @@
         </div>
     </header>
 
-    <section id="hero">
+    <section id="coverpage" class="coverpage">
+        <div class="slider-container">
+          <div class="slider">
+            <div class="slide">
+              <img src="Banner1.jpg" alt="Slide 1">
+            </div>
+            <div class="slide">
+              <img src="Banner2.jpg" alt="Slide 2">
+            </div>
+            <div class="slide">
+              <img src="Banner3.jpg" alt="Slide 3">
+            </div>
+          </div>
+          <button class="prev" onclick="changeSlide(-1)">❮</button>
+          <button class="next" onclick="changeSlide(1)">❯</button>
+          <div class="dots-container">
+            <span class="dot" onclick="currentSlide(0)"></span>
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+          </div>
+        </div>
+      </section>
+      
+
+<!-- <section class="hero"> -->
+    <section id="hero" class="hero">
         <div class="container">
-            <h2>Reliable Power Solutions for Your Home & Business in Bangalore</h2>
+            <h1>Reliable Power Solutions for Your Home & Business in Bangalore</h1>
             <p>Get the best Luminous Home UPS Inverters and V-Guard, Amaron batteries from Alpha Power System. Expert installation and maintenance services available.</p>
             <a href="contact.html" class="cta-button">Request a Quote</a>
         </div>
     </section>
 
-    <section id="featured-products">
+    <section id="featured-products" >
         <div class="container">
             <h1>Featured Products</h1>
             <div class="product-grid">
                 <div class="product">
-                    <img src="luminous-inverter.jpg" alt="Luminous Zelio+ 1100 Home UPS" width="200" height="150">
+                    <img src="luminous-zelio.jpg" alt="Luminous Zelio+ 1100 Home UPS" width="200" height="150">
                     <h3>Luminous Zelio+ 1100 Home UPS</h3>
                     <p>Pure sine wave inverter for sensitive electronics. Ideal for Bangalore homes.</p>
                     <a href="products.html#luminous" class="product-link">Learn More</a>
                 </div>
                 <div class="product">
-                    <img src="amaron-battery.jpg" alt="Amaron 150AH Inverter Battery" width="200" height="150">
+                    <img src="luminous-battery.jpg" alt="Amaron 150AH Inverter Battery" width="200" height="150">
                     <h3>Amaron 150AH Inverter Battery</h3>
                     <p>Long-lasting and reliable battery for your inverter system.</p>
                     <a href="products.html#amaron" class="product-link">Learn More</a>
                 </div>
             </div>
 
+
+
+            <!-- Authorized Dealers -->
+            <section id="trusted-brands" class="trusted-brands ">
+                <div class="container">
+                    <h1>Authorized Dealer of Leading Brands</h1>
+                    <p>We are proud to be an authorized dealer for the following trusted brands in power solutions:</p>
+            
+                    <div class="brand-logos">
+                        <img src="luminous-logo.png" alt="Luminous Logo" href="https://www.luminousindia.com/">
+                        <img src="V-Guard_Logo.jpg" alt="V-Guard Logo">
+                        <img src="amaron-logo.png" alt="Amaron Logo">
+                        <img src="exide-logo.jpg" alt="Exide Logo">
+                        <img src="livfast-logo.png" alt="LivFast Logo">
+                        <img src="luminous-logo.png" alt="FedEx Logo">
+                        <!-- Add more brand logos as needed -->
+                    </div>
+                </div>
+            </section>
+
+
             <!-- Automatic Slider -->
-            <h2>Popular Products</h2>
+            <h1>Popular Products</h1>
             <div class="product-slider">
                 <div class="product-slide-track">
                     <div class="product-slide">
@@ -104,14 +148,14 @@
         </div>
     </section>
 
-    <section id="about-snippet">
+    <section id="about-snippet" >
         <div class="container">
             <h1>About Alpha Power System</h1>
             <p>Alpha Power System is a leading provider of UPS inverters and batteries in Banaswadi, Bangalore. We are authorized dealers for Luminous, V-Guard, and Amaron. We offer expert installation and maintenance services to ensure your power systems are always running smoothly. <a href="about.html">Read More</a></p>
         </div>
     </section>
 
-    <section id="services-snippet">
+    <section id="services-snippet" >
         <div class="container">
             <h1>Our Services</h1>
             <ul>
@@ -140,13 +184,35 @@
             </form>
         </div>
     </section>
-
+<!-- </section> -->
+<div class="map-container">
+    <!-- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.411579170384!2d77.6614061!3d13.009441899999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae11b2e139f07f%3A0xeb4a49c57cc4d718!2sAlpha%20Power%20System!5e0!3m2!1sen!2sin!4v1741333241696!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> -->
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.411579170384!2d77.6614061!3d13.009441899999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae11b2e139f07f%3A0xeb4a49c57cc4d718!2sAlpha%20Power%20System!5e0!3m2!1sen!2sin!4v1741333241696!5m2!1sen!2sin" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+</div>
     <footer>
+        <div class="footer-social">
+            <h3>Follow Us</h3>
+            <div class="social-links">
+                <a href="#" target="_blank" rel="noopener noreferrer"><img src="facebook-icon.png" alt="Facebook"></a>
+                <a href="#" target="_blank" rel="noopener noreferrer"><img src="Twitter-icon.png" alt="Twitter"></a>
+                <a href="#" target="_blank" rel="noopener noreferrer"><img src="linkedin-icon.png" alt="LinkedIn"></a>
+                <a href="#" target="_blank" rel="noopener noreferrer"><img src="instagram-icon.png" alt="Instagram"></a>
+                <!-- Add more social media links as needed -->
+            </div>
+        </div>
         <div class="container">
             <p>© 2025 Alpha Power System. All rights reserved.</p>
             <p>Address: Banaswadi, Bangalore | Phone: +91-9036715532</p>
         </div>
+
     </footer>
+    <a href="https://wa.me/919036715532" class="whatsapp-float" target="_blank" rel="noopener noreferrer">
+        <img src="whatsapp-icon.png" alt="WhatsApp" width="60" height="60">
+    </a>
+    <a href="tel:+919036715532" class="call-float" target="_blank" rel="noopener noreferrer">
+        <img src="call-icon.png" alt="Call Us" width="60" height="60">
+    </a>
+     <script src="slider.js"></script> 
 
 </body>
 </html>
