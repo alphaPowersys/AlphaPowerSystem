@@ -40,11 +40,26 @@
 
     <section id="contact-page">
         <div class="container">
-            <h1>Contact Us</h1>
+            <h2>Get in Touch</h2>
 
             <div class="contact-container">
                 <div class="contact-form">
-                    <form action="submit-form.php" method="post">
+                    <!-- <form action="submit-form.php" method="post">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" required>
+
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+
+                        <label for="phone">Phone:</label>
+                        <input type="tel" id="phone" name="phone">
+
+                        <label for="message">Message:</label>
+                        <textarea id="message" name="message" rows="4" required></textarea>
+
+                        <button type="submit">Submit</button>
+                    </form> -->
+                    <form id="myForm">
                         <label for="name">Name:</label>
                         <input type="text" id="name" name="name" required>
 
@@ -59,23 +74,27 @@
 
                         <button type="submit">Submit</button>
                     </form>
+                    
+              <!--   Javascript section-->
+                    
                 </div>
 
                 <div class="contact-details">
-                    <div class="contact-info">
-                        <h3>Our Address</h3>
-                        <p> 4th Cross Rd, B Channasandra, Banaswadi, Bengaluru, Karnataka 560043 </p>
-
-                        <h3>Phone</h3>
-                        <a href="tel:+919036715532" class="phone-link">
-                            <!-- <img src="Phone_icon.png" alt="Call +91-9036715532" class="phone-icon"> -->
-                            +91-9036715532
-                        </a>
-                        
-
-                        <h3>Business Hours</h3>
-                        <p>Monday - Saturday: 9:00 AM - 9:00 PM</p>
-                    </div>
+                    <div class="contact-details">
+                        <div class="contact-info">
+                            <h3>Our Address</h3>
+                            <p> 4th Cross Rd, B Channasandra, Banaswadi, Bengaluru, Karnataka 560043 </p>
+        
+                            <h3>Phone</h3>
+                            <a href="tel:+919036715532" class="phone-link">
+                                <!-- <img src="Phone_icon.png" alt="Call +91-9036715532" class="phone-icon"> -->
+                                +91-9036715532
+                            </a>
+                            
+        
+                            <h3>Business Hours</h3>
+                            <p>Monday - Saturday: 9:00 AM - 9:00 PM</p>
+                        </div>
 
                     <div class="map-container">
                         <!-- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.411579170384!2d77.6614061!3d13.009441899999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae11b2e139f07f%3A0xeb4a49c57cc4d718!2sAlpha%20Power%20System!5e0!3m2!1sen!2sin!4v1741333241696!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> -->
@@ -90,17 +109,18 @@
         <div class="footer-social">
             <h3>Follow Us</h3>
             <div class="social-links">
-                <a href="#" target="_blank" rel="noopener noreferrer"><img src="facebook-icon.png" alt="Facebook"></a>
-                <a href="#" target="_blank" rel="noopener noreferrer"><img src="Twitter-icon.png" alt="Twitter"></a>
-                <a href="#" target="_blank" rel="noopener noreferrer"><img src="linkedin-icon.png" alt="LinkedIn"></a>
-                <a href="#" target="_blank" rel="noopener noreferrer"><img src="instagram-icon.png" alt="Instagram"></a>
+                <a href="https://www.facebook.com/profile.php?id=100043186856836" target="_blank" rel="noopener noreferrer"><img src="facebook-icon.png" alt="Facebook"></a>
+                <a href="https://twitter.com/AlphapowerBlore" target="_blank" rel="noopener noreferrer"><img src="Twitter-icon.png" alt="Twitter"></a>
+                <a href="https://www.linkedin.com/in/alpha-power-system-31943b33b" target="_blank" rel="noopener noreferrer"><img src="linkedin-icon.png" alt="LinkedIn"></a>
+                <a href="https://www.instagram.com/alphapowersystem" target="_blank" rel="noopener noreferrer"><img src="instagram-icon.png" alt="Instagram"></a>
                 <!-- Add more social media links as needed -->
             </div>
         </div>
         <div class="container">
             <p>© 2025 Alpha Power System. All rights reserved.</p>
-            <p>Address: 4th Cross Rd, B Channasandra, Banaswadi, Bengaluru, Karnataka 560043 | Phone: +91-9036715532</p>
+            <p>Address: Banaswadi, Bangalore | Phone: +91-9036715532</p>
         </div>
+
     </footer>
     <a href="https://wa.me/919036715532" class="whatsapp-float" target="_blank" rel="noopener noreferrer">
         <img src="whatsapp-icon.png" alt="WhatsApp" width="60" height="60">
@@ -108,5 +128,29 @@
     <a href="tel:+919036715532" class="call-float" target="_blank" rel="noopener noreferrer">
         <img src="call-icon.png" alt="Call Us" width="60" height="60">
     </a>
+  
 </body>
+<script>
+    document.getElementById('myForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+    
+        const name = document.getElementById('name').value;
+        const Email = document.getElementById('email').value;
+        const Phone = document.getElementById('phone').value;
+        const message = document.getElementById('message').value;
+    
+        const whatsappNumber = '+919036715532';  
+        const messageText = `Name: ${name}\nPhone: ${Phone}\nMessage: ${message}\n`;
+    
+        // Encode message for URL
+        const encodedMessage = encodeURIComponent(messageText);
+    
+        // Create WhatsApp link
+        const whatsappLink = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
+    
+        // Open WhatsApp with pre-filled message
+        console.log(encodedMessage,messageText)
+        window.open(whatsappLink, '_blank');
+    });
+    </script>
 </html>
