@@ -477,10 +477,8 @@ footer a {
     header ul {
         padding: 0;
         margin: 0;
-        position:relative;
-        top: 28px;
         left:-20px;
-        
+        margin-bottom:13px;        
     }
 
     header li {
@@ -985,27 +983,32 @@ nav ul{
 .cta-button:hover {
     background-color: #1565c0; /* Darker blue on hover */
 }
-
+/* Banner */
 .coverpage {
     position: relative;
     width: 100%;
     /* max-width: 600px; */
     margin: auto;
     overflow: hidden;
-  }
-  
-  .slider {
+    /* Added padding to keep a small gap in the sides */
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.slider {
     display: flex;
     transition: transform 0.5s ease-in-out;
     width: 300%;
-  }
-  
-  .slide {
+
+}
+
+.slide {
     min-width: 33.33%;
     box-sizing: border-box;
-  }
-  
-  .prev, .next {
+}
+
+.prev,
+.next {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -1014,22 +1017,22 @@ nav ul{
     border: none;
     padding: 10px;
     cursor: pointer;
-  }
-  
-  .prev {
-    left:0 ;
-  }
-  
-  .next {
+}
+
+.prev {
+    left: 0;
+}
+
+.next {
     right: 0;
-  }
-  
-  .dots-container {
+}
+
+.dots-container {
     text-align: center;
     padding: 10px;
-  }
-  
-  .dot {
+}
+
+.dot {
     height: 15px;
     width: 15px;
     margin: 0 2px;
@@ -1037,11 +1040,41 @@ nav ul{
     border-radius: 50%;
     display: inline-block;
     cursor: pointer;
+}
+
+/*Set the Image Size for different resolutions*/
+.slide img {
+    width: 100%;
+    height: auto;
+    /* Default height for larger screens */
+    max-height: 550px;
+    object-fit: cover; /* Keep aspect ratio and crop if needed */
+}
+
+/*Adjusting height of images for various resolutions*/
+@media (max-width: 768px) {
+  .coverpage{
+    padding: 0px; /*Reduce/remove padding on those smaller screens*/
   }
-  .slide img{
-    width:100%;
-    height:550px;
-}  
+
+    .slide img {
+        max-height: 400px;
+    }
+}
+
+@media (max-width: 480px) {
+    .slide img {
+        max-height: 300px;
+    }
+
+    .prev,
+    .next {
+        padding: 5px;
+        font-size: 0.8em; /* Redue font sizes for those small buttons */
+    }
+
+}
+/* .whatsapp-float */
 .whatsapp-float {
     position: fixed;
     width: 60px;
@@ -1072,22 +1105,25 @@ nav ul{
     .whatsapp-float {
         width: 50px;
         height: 50px;
-        bottom: 20px;
-        right: 20px;
+        bottom: 10px;
+        right: 5px;
+        padding:5px;
     }
 
     .whatsapp-float img {
         width: 40px;
         height: 40px;
-        margin-top: 5px;
+        margin-top: 15px;
     }
 }
+
+/* .call-float */
 .call-float {
     position: fixed;
     width: 60px;
     height: 60px;
-    bottom: 30px; /* Position above the WhatsApp icon */
-    left: 40px;
+    bottom: 40px; /* Position above the WhatsApp icon */
+    left: 10px;
     /* background-color: #007bff; Blue */
     color: #fff;
     border-radius: 50px;
@@ -1112,14 +1148,15 @@ nav ul{
     .call-float {
         width: 50px;
         height: 50px;
-        bottom: 80px; /* Adjust position for smaller screens */
-        right: 20px;
+        bottom: 9px; /* Adjust position for smaller screens */
+        right: 5px;
+        padding:5px;
     }
 
     .call-float img {
         width: 40px;
         height: 40px;
-        margin-top: 5px;
+        margin-top: 15px;
     }
 }
 .phone:hover {
@@ -1137,9 +1174,11 @@ footer {
 }
 
 .footer-content {
-    display: flex; /* Arrange footer sections horizontally */
-    justify-content: space-around;
-    flex-wrap: wrap; /* Allow sections to wrap on smaller screens */
+    display: flex;
+    /* Arrange footer sections horizontally */
+    justify-content: center; /*This will cause the children elements to center instead of left */
+    flex-wrap: wrap;
+    /* Allow sections to wrap on smaller screens */
     padding-bottom: 1rem;
 }
 
@@ -1147,7 +1186,8 @@ footer {
 .footer-social,
 .footer-contact {
     margin-bottom: 1rem;
-    text-align: center; /* Align content within each section */
+    text-align: center;
+    /* Align content within each section */
 }
 
 .footer-about h3,
@@ -1161,10 +1201,12 @@ footer {
 .footer-social .social-links {
     display: flex;
     /* Ensure social icons are displayed horizontally */
+    justify-content: center;
+    /* New line for center */
     gap: 20px;
     /* 12px space between social icons, adjust as needed */
-    position: relative;
-    left:674px;
+    left:300px
+
 }
 
 /* Restyle for image links*/
@@ -1188,13 +1230,15 @@ footer {
 }
 
 footer a {
-    color: #fff; /* White links in footer */
+    color: #fff;
+    /* White links in footer */
     display: inline-block;
     /* Makes each item take it's space */
     opacity: 0.8;
     transition: opacity 0.3s ease;
 
 }
+
 footer a:hover {
     opacity: 1; /* Brighter on hover */
 }
@@ -1218,5 +1262,8 @@ footer a:hover {
     .footer-contact {
         text-align: center;
         /* Center content within sections */
+    }
+    .footer-social .social-links{
+        position: static;  /*remove fixed positioning as it may be confusing*/
     }
 }
