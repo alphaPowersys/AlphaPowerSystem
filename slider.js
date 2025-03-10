@@ -122,3 +122,29 @@ function showSlides(n) {
   dots.forEach(dot => dot.classList.remove('active'));
   dots[slideIndex].classList.add('active');
 }
+//read more product description
+document.addEventListener('DOMContentLoaded', function() {
+  try {
+      const readMoreButtons = document.querySelectorAll('.read-more-btn');
+
+      readMoreButtons.forEach(button => {
+          button.addEventListener('click', function(event) {
+              event.preventDefault();
+              const description = this.parentNode;
+
+              if (description) {
+                  description.classList.toggle('expanded');
+                  if (description.classList.contains('expanded')) {
+                      this.textContent = 'Read Less';
+                  } else {
+                      this.textContent = 'Read More';
+                  }
+              } else {
+                  console.error("Parent 'description' element not found!");  // Error handling
+              }
+          });
+      });
+  } catch (error) {
+      console.error("An error occurred in the Read More script:", error);  // Global error handling
+  }
+});

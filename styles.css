@@ -1269,3 +1269,52 @@ footer a:hover {
         position: static;  /*remove fixed positioning as it may be confusing*/
     }
 }
+.description {
+    position: relative;
+    overflow: hidden;
+    max-height: 75px; /* Reduced height, adjust as needed */
+    transition: max-height 0.3s ease-out;
+}
+
+.full-description {
+    display: none;
+    margin-top: 5px;  /* Add some space between the short and full descriptions */
+}
+
+.description.expanded {
+    max-height: none; /* Remove height limit when expanded */
+}
+
+.description.expanded .full-description {
+    display: block; /* Show full description */
+}
+
+.read-more-btn {
+    display: block; /* Make sure it's a block element */
+    text-align: center;
+    margin-top: 5px;
+    cursor: pointer;
+    color: blue;
+    text-decoration: none;
+}
+
+.description:not(.expanded) .read-more-btn {
+    /* Only show Read More if not expanded */
+    display: block;
+}
+
+.description.expanded .read-more-btn {
+    /* Hide Read More when expanded */
+    display: block;
+}
+
+/* Optional: Add a gradient to fade out the bottom of the truncated text */
+.description:not(.expanded):after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 20px;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0), white);
+}
