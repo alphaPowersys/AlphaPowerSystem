@@ -6,10 +6,10 @@
     <meta name="description" content="Contact Alpha Power System in Banaswadi, Bangalore for all your UPS, inverter & battery needs. Get expert advice. Call +91-9036715532 or use our form.">
     <meta name="keywords" content="contact UPS Bangalore, inverter Banaswadi, battery near me, phone number, address, Banaswadi">
     <title>Contact Us | Alpha Power System, Bangalore</title>
-    <link rel="icon" href="alpha-icon.png" type="image/x-icon">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="img/alpha-icon/alpha-icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/styles.css">
     <link rel="canonical" href="https://www.alphapowersystem.in/contact.html">
-    
+
 </head>
 <body>
 
@@ -17,12 +17,12 @@
         <div class="container">
             <div class="branding">
                 <!-- <a href="index.html"><img src="luminous-logo.png" alt="Alpha Power System Logo" class="logo"></a> -->
-                <a href="index.html"><img src="alpha-logo.jpg" alt="Alpha Power System Logo" class="logo"></a>
+                <a href="index.html"><img src="img/alpha-icon/alpha-logo.jpg" alt="Alpha Power System Logo" class="logo"></a>
             </div>
             <!-- <div class="header-top">
                 <p class="phone-number">
                     <a href="tel:+919036715532" class="phone-link">
-                        <img src="Phone_icon.png" alt="Call +91-9036715532" class="phone-icon">
+                        <img src="img/Phone_icon.png" alt="Call +91-9036715532" class="phone-icon">
                         +91-9036715532
                     </a>
                 </p>
@@ -32,8 +32,10 @@
                     <li><a href="index.html">Home</a></li>
                     <li><a href="products.html">Products</a></li>
                     <li><a href="about.html">About Us</a></li>
+                    <li><a href="blog.html">Blog</a></li>
                     <li><a href="services.html">Services</a></li>
                     <li><a href="contact.html">Contact Us</a></li>
+                    
                 </ul>
             </nav>
         </div>
@@ -75,9 +77,9 @@
 
                         <button type="submit">Submit</button>
                     </form>
-                    
+
               <!--   Javascript section-->
-                    
+
                 </div>
 
                 <div class="contact-details">
@@ -85,14 +87,14 @@
                         <div class="contact-info">
                             <h3>Our Address</h3>
                             <p> 4th Cross Rd, B Channasandra, Banaswadi, Bengaluru, Karnataka 560043 </p>
-        
+
                             <h3>Phone</h3>
                             <a href="tel:+919036715532" class="phone-link">
                                 <!-- <img src="Phone_icon.png" alt="Call +91-9036715532" class="phone-icon"> -->
                                 +91-9036715532
                             </a>
-                            
-        
+
+
                             <h3>Business Hours</h3>
                             <p>Monday - Saturday: 9:00 AM - 9:00 PM</p>
                         </div>
@@ -110,10 +112,10 @@
         <div class="footer-social">
             <h3>Follow Us</h3>
             <div class="social-links">
-                <a href="https://www.facebook.com/profile.php?id=100043186856836" target="_blank" rel="noopener noreferrer"><img src="facebook-icon.png" alt="Facebook"></a>
-                <a href="https://twitter.com/AlphapowerBlore" target="_blank" rel="noopener noreferrer"><img src="Twitter-icon.png" alt="Twitter"></a>
-                <a href="https://www.linkedin.com/in/alpha-power-system-31943b33b" target="_blank" rel="noopener noreferrer"><img src="linkedin-icon.png" alt="LinkedIn"></a>
-                <a href="https://www.instagram.com/alphapowersystem" target="_blank" rel="noopener noreferrer"><img src="instagram-icon.png" alt="Instagram"></a>
+                <a href="https://www.facebook.com/profile.php?id=100043186856836" target="_blank" rel="noopener noreferrer"><img src="img/facebook-icon.png" alt="Facebook"></a>
+                <a href="https://twitter.com/AlphapowerBlore" target="_blank" rel="noopener noreferrer"><img src="img/Twitter-icon.png" alt="Twitter"></a>
+                <a href="https://www.linkedin.com/in/alpha-power-system-31943b33b" target="_blank" rel="noopener noreferrer"><img src="img/linkedin-icon.png" alt="LinkedIn"></a>
+                <a href="https://www.instagram.com/alphapowersystem" target="_blank" rel="noopener noreferrer"><img src="img/instagram-icon.png" alt="Instagram"></a>
                 <!-- Add more social media links as needed -->
             </div>
         </div>
@@ -124,31 +126,31 @@
 
     </footer>
     <a href="https://wa.me/919036715532" class="whatsapp-float" target="_blank" rel="noopener noreferrer">
-        <img src="whatsapp-icon.png" alt="WhatsApp" width="60" height="60">
+        <img src="img/whatsapp-icon.png" alt="WhatsApp" width="60" height="60">
     </a>
     <a href="tel:+919036715532" class="call-float" target="_blank" rel="noopener noreferrer">
-        <img src="call-icon.png" alt="Call Us" width="60" height="60">
+        <img src="img/call-icon.png" alt="Call Us" width="60" height="60">
     </a>
-  
+
 </body>
 <script>
     document.getElementById('myForm').addEventListener('submit', function(event) {
         event.preventDefault();
-    
+
         const name = document.getElementById('name').value;
         const Email = document.getElementById('email').value;
         const Phone = document.getElementById('phone').value;
         const message = document.getElementById('message').value;
-    
-        const whatsappNumber = '+919036715532';  
+
+        const whatsappNumber = '+919036715532';
         const messageText = `Name: ${name}\nPhone: ${Phone}\nMessage: ${message}\n`;
-    
+
         // Encode message for URL
         const encodedMessage = encodeURIComponent(messageText);
-    
+
         // Create WhatsApp link
         const whatsappLink = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
-    
+
         // Open WhatsApp with pre-filled message
         console.log(encodedMessage,messageText)
         window.open(whatsappLink, '_blank');
