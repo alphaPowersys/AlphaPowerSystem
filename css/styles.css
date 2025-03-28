@@ -1598,7 +1598,6 @@ footer a:hover {
 .blog-post-content li {
     margin-bottom: 8px;
 }
-<<<<<<< HEAD
 /* Product Details Section */
 .product-details {
     background-color: #fff; /* White background */
@@ -1763,7 +1762,6 @@ footer a:hover {
         animation: infinity-scroll 20s linear infinite;  /* faster movement for smaller screens */
     }
 }
-=======
 .cta-section {
     background-color: #f0f8ff; /* Light blue background */
     padding: 20px;
@@ -1791,4 +1789,3 @@ footer a:hover {
   .cta-button:hover {
     background-color: #0056b3; /* Darker blue on hover */
   }
->>>>>>> b5892d8f32540d952cdaa4a8a0c1b4970915a585
