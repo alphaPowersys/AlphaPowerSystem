@@ -1528,10 +1528,11 @@ footer a:hover {
 .blog-date {
     /* font-style: italic; */
     font-size: 1.1em;
-    color: black;
+    color: rgb(247, 244, 244);
     position:absolute;
-    top:254px;
-    /* text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8); */
+    top:337px;
+    left: 51px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
 }
 /* End Blog Hero Section */
 /*general styling*/
@@ -1597,6 +1598,7 @@ footer a:hover {
 .blog-post-content li {
     margin-bottom: 8px;
 }
+<<<<<<< HEAD
 /* Product Details Section */
 .product-details {
     background-color: #fff; /* White background */
@@ -1761,3 +1763,32 @@ footer a:hover {
         animation: infinity-scroll 20s linear infinite;  /* faster movement for smaller screens */
     }
 }
+=======
+.cta-section {
+    background-color: #f0f8ff; /* Light blue background */
+    padding: 20px;
+    margin-top: 30px;
+    text-align: center;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  .cta-section h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  
+  .cta-button {
+    display: inline-block;
+    background-color: #007bff; /* Blue button color */
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin: 5px;
+  }
+  
+  .cta-button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+  }
+>>>>>>> b5892d8f32540d952cdaa4a8a0c1b4970915a585
